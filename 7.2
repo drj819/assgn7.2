@@ -1,0 +1,34 @@
+Assignment 7.2 (1)
+
+
+counts<- table(mtcars$cyl)
+barplot(counts ,main ="bar plot of cyl",xlab="cyl",ylab = "counts",col="red")
+counts<- table(mtcars$carb)
+barplot(counts ,main ="bar plot of carb",xlab="carb",ylab = "counts",col="brown")
+counts<- table(mtcars$gear)
+barplot(counts ,main ="bar plot of gear",xlab="gear",ylab = "counts",col="blue")
+counts<- table(mtcars$am)
+barplot(counts ,main ="bar plot of am",xlab="am",ylab = "counts",col="yellow")
+counts<- table(mtcars$vs)
+barplot(counts ,main ="bar plot of vs",xlab="vs",ylab = "counts",col="pink")
+
+
+
+(2)
+library(ggplot2)
+library(mtcars)
+
+scatterplotMatrix(~mpg+disp+drat+hp|gear,data=mtcars,main="Three Gear Options")
+
+(3)
+class(mtcars)
+
+d<- density(mtcars$mpg)
+plot(d, main="kernel density of mpg")
+polygon(d,col="brown",border ="red")
+
+
+c<- density(mtcars$disp)
+plot(c, main="kernel density of disp")
+polygon(c,col="blue",border ="red")
+
